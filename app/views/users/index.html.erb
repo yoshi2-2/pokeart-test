@@ -1,0 +1,136 @@
+
+<div class="container">
+  <div class="content">
+    <div class="header__bar row">
+        <a class="header__title">PokeArt</a>
+        <% if user_signed_in? %>
+                <a href="/users/<%= current_user.id %>">画像を編集する</a>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <% else %>
+            <%= link_to "ログイン", new_user_session_path, :class => 'post' %>
+            <%= link_to "新規登録", new_user_registration_path, :class => 'post' %>
+        <% end %>
+    </div>
+    <div class="main__head">
+      何をデザインしますか？
+    </div>
+    <div class="side">
+      <div class="side__inner">
+        <div class="side__header">
+        </div><!-- side__header -->
+        <% if user_signed_in? %>
+          <div class="side__list">
+            <div class="createbutton button">
+              <a href="/users/<%= current_user.id %>">画像編集</a>
+            </div>
+          </div>
+          <div class="side__list">
+            <div class="createbutton button">
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            </div>
+          </div>
+          <% else %>
+          <div class="side__list">
+            <div class="createbutton button">
+            <%= link_to "ログイン", new_user_session_path, :class => 'post' %>
+            </div>
+          </div>
+          <div class="side__list">
+            <div class="createbutton button">
+            <%= link_to "新規登録", new_user_registration_path, :class => 'post' %>
+            </div>
+          </div>
+        <% end %>
+        <div class="side__menu">
+          <div class="side__list">
+            <a class="side__menu--link" href="#">ページ上部に移動</a>
+          </div>
+          <div class="side__list">
+            <a class="side__menu--link" href="#">デザイン</a>
+          </div>
+        </div>
+        <div class="side__footercontent">
+          <div class="logo">PokeArt</div>
+        </div>
+      </div><!-- side__inner -->
+    </div><!-- side -->
+    <div class="main__content">
+      <div class="main">
+        <div class="main__top">
+          <h3>作成できるデザイン一覧</h3>
+          <div class="slider-wrapper">
+            <div class="slider">
+              <div class="unit">
+                <div class="img_unit">
+                  <a>YouTubeのサムネ
+                    <%= image_tag("sample.png") %>
+                  </a>
+                </div>
+              </div><!-- /.unit -->
+              <div class="unit">
+                <div class="img_unit">
+                  <a>CDジャケット
+                    <%= image_tag("sample3.jpg") %>
+                  </a>
+                </div>
+              </div><!-- /.unit -->
+              <div class="unit">
+                <div class="img_unit">
+                  <a>ハガキ・年賀状
+                    <%= image_tag("sample2.png") %>
+                  </a>
+                </div>
+              </div><!-- /.unit -->
+              <div class="unit">
+                <div class="img_unit">
+                  <a>ポスター
+                    <%= image_tag("sample4.png") %>
+                  </a>
+                </div>
+              </div><!-- /.unit -->
+            </div><!-- /.slider -->
+          </div><!-- /.slider-wrapper -->
+        </div><!-- main__top -->
+        <br>
+           <br>
+        <h3>試し書き</h3>
+        <br>
+        <button id="addtext__button">文字を入力</button>
+        <div>
+          <label for="text-stroke-color">文字の色:</label>
+          <input type="color" value="" id="canvas-text-color">
+          <label for="text-stroke-color">文字の縁枠の色:</label>
+          <input type="color" value="" id="text-stroke-color">
+        </div>
+
+
+        <div class="main__content--design">
+          <div class="canvas__content">
+            <div class="canvas__wrapper__size">
+              <div class="s-canvas__wrapper">
+                <canvas id="canvas"></canvas>
+              </div>
+            </div>
+          </div>
+        </div> <!-- main__content--design-->
+        <br>
+        <h3>アカウント作成すると利用できる機能</h3>
+        <div class="toppage-info">
+          <ul>
+            <li>編集後の画像ダウンロード</li>
+            <li>パソコン上から画像選択</li>
+          </ul>
+        </div>
+        <h3>近日中に追加予定の機能</h3>
+        <div class="toppage-info">
+          <ul>
+            <li>文字の縁枠の太さ設定</li>
+            <li>フォントスタイル変更</li>
+            <li>テキストの背景色設定</li>
+            <li>ハガキ、名刺などのサイズに調整</li>
+          </ul>
+        </div>
+      </div><!-- main-->
+    </div><!-- main__content-->
+  </div><!-- content-->
+</div><!-- container-->

@@ -1,0 +1,193 @@
+header{
+  background-color: black;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+}
+
+h3{
+  padding:30px 30px 10px;
+  font-size: 30px;
+}
+
+h5{
+  color:#898D8F;
+  padding: 20px;
+  text-align: center;
+}
+
+a{ text-decoration: none; }
+a:link{ color: #fff; }
+a:visited { color: #fff; }
+a:active { color: #fff; }
+
+.edit__side__list {
+  list-style: none;
+  width: 72px;
+}
+
+html{
+  overflow:auto;
+}
+
+.edit__container {
+  padding: 0%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background: #eee;
+}
+
+.edit__content {
+  padding: 0;
+}
+
+/*------サイドバー設定開始------*/
+.edit__side {
+  margin-top: 50px;
+  font-size: 8px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 72px;
+  color: #fff;
+  background: #3F4652;
+  z-index: 1;
+}
+
+.edit__side__inner{
+  padding-top: 20px;
+}
+
+.edit__side__list{
+  height: 72px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.edit__side__list:hover{
+  background: #363D47;
+}
+
+.edit__icon{
+  line-height: 30px;
+  width: 72px;
+}
+
+.edit__side__bottom{
+  position: fixed;
+  right: 0;
+  width:72px;
+  bottom: 0;
+}
+
+.edit__side__logout{
+  height: 72px;
+  line-height: 72px;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+}
+/*------サイドバー設定終了------*/
+
+
+/*------ヘッダー設定開始------*/
+.content__header{
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  background: linear-gradient(-135deg, #26BACF, #7842E5) fixed;
+  font-size: 1px;
+  line-height: 50px;
+  white-space: nowrap;
+  z-index: 1;
+  font-size: 14px;
+}
+
+.content__header--menu a{
+  padding-left: 50px;
+  color: #fff;
+}
+
+.content__header--right{
+  float: right;
+  padding: 0 20px;
+  white-space: nowrap
+}
+
+
+/*------ヘッダー設定終了------*/
+.edit__main {
+  padding-top: 50px;
+  width: 100vw;
+  overflow-x : hidden;
+  float: left;
+  height: calc(100vh - 50px);
+  margin-right: 10px;
+  background: #ECF0F2;
+}
+
+
+/*------userの作成するデザイン画像開始------*/
+.canvas__content{
+  margin-left: 8%;
+  width:70vw;
+}
+
+
+
+/*------動くテキスト開始------*/
+.move__text{
+  position: absolute;
+  z-index: 1;
+  min-width: 5%;
+  left: 10%;
+}
+
+/*------動くテキスト終了------*/
+#w2{
+  width: 70%;
+  background-color: brown;
+  position: relative;
+}
+
+.move2{
+  position: absolute;
+}
+
+
+/*------canvasデータ------*/
+.slider_bar{
+  padding-left:43vw;
+}
+
+.canvas__wrapper{
+  width: 853px;
+  height: 480px;
+  margin: 0 auto;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  background-color: white;
+}
+
+#downloadbtn{
+  float: right;
+}
+
+
+/*サンプルキャンバス*/
+.s-canvas__wrapper{
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  background-color: white;
+}
+

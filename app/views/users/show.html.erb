@@ -1,0 +1,71 @@
+<div class="content__header">
+  <span class="content__header--menu">
+    <a href="/">ホーム</a>
+    <a href="/">サイズを変更</a>
+  </span>
+  <span class="content__header--right">
+    test
+  </span>
+</div>
+<div class="edit__container">
+  <div class="edit__content">
+    <div class="edit__side">
+      <div class="edit__side__inner">
+        <div class="edit__side__menu">
+          <div class="edit__side__list">
+            <div class="edit__icon">i</div>
+            <span class="edit__side__menu--link"><a href="#">テンプレート</a></span>
+          </div>
+          <div class="edit__side__list">
+            <div class="edit__icon">i</div>
+            <span class="edit__side__menu--link"><a href="#">画像アップロード</a></span>
+          </div>
+          <div class="edit__side__list">
+            <div class="edit__icon">i</div>
+            <span class="edit__side__menu--link"><a href="#">素材</a></span>
+          </div>
+          <div class="edit__side__list">
+            <div class="edit__icon">i</div>
+            <span class="edit__side__menu--link"><a href="#">テキスト</a></span>
+          </div>
+          <div class="edit__side__list">
+            <div class="edit__icon">i</div>
+            <span class="edit__side__menu--link"><a href="#">背景</a></span>
+          </div>
+        </div>
+        <div class="edit__side__bottom">
+          <div class="edit__side__logout">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          </div>
+        </div><!-- side__logout -->
+      </div><!-- side__inner -->
+    </div><!-- side -->
+    <div class="edit__main">
+      <div class="main__content">
+
+
+        <div class="upload"><input type="file" name="file" id="file"></div>
+        <button id="addtext__button">文字を入力</button>
+        <div>
+          <label for="text-stroke-color">文字の色:</label>
+          <input type="color" value="" id="canvas-text-color">
+          <label for="text-stroke-color">文字の縁枠の色:</label>
+          <input type="color" value="" id="text-stroke-color">
+        </div>
+
+
+        <div class="main__content--design">
+          <div class="canvas__content">
+            <div class="canvas__wrapper__size">
+              <div class="canvas__wrapper">
+                <canvas id="canvas"></canvas>
+              </div>
+            </div>
+            <input id="b" class="bubbly-button" type="button" value="画像をダウンロード" />
+          </div>
+        </div> <!-- main__content--design-->
+      </div><!-- main__content-->
+    </div><!-- main-->
+ </div><!-- content-->
+</div><!-- container-->
+
